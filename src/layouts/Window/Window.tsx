@@ -1,7 +1,11 @@
 import { Header } from "../Header/Header";
 import styles from "./Window.module.css";
 
-export function Window() {
+type WindowProps = {
+  content: any;
+};
+
+export function Window({ content }: WindowProps) {
   const actionsMock = {
     onMinimize: () => console.log("minimizou"),
     onMaximize: () => console.log("maxizimou"),
@@ -11,7 +15,7 @@ export function Window() {
   return (
     <section className={`${styles.window} ${styles.opened}`}>
       <Header actions={actionsMock} icon="doom" name="estou rodando doom" />
-      <div className={styles.content}>ESTOU RODANDO DOOM</div>
+      <div className={styles.content}>{content}</div>
     </section>
   );
 }
