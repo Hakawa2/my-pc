@@ -1,0 +1,5 @@
+.taskbar {
+  box-shadow: 2px 1px 0px 0px rgba(240, 240, 240, 1) inset;
+  background-color: var(--mono-100);
+  padding: 0.5rem 1rem;
+}

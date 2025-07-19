@@ -10,4 +10,7 @@
   --red-100: #eb3323;
   --red-200: #9c2054;
   --green-100: #26b50f;
+  --gap-small: 4px;
+  --gap-medium: 8px;
+  --gap-large: 16px;
 }

@@ -1,0 +1,5 @@
+.desktop {
+  height: calc(100vh - 36px);
+  width: 100%;
+  padding: 4rem;
+}
