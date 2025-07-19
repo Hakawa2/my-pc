@@ -7,12 +7,13 @@ type IconButtonProps = {
   hasBackground?: boolean;
 } & ButtonBaseProps;
 
-export function IconButton({ icon, hasBackground }: IconButtonProps) {
+export function IconButton({ icon, hasBackground, action }: IconButtonProps) {
   return (
     <button
       className={`${styles.iconButton} ${
         hasBackground && styles.background
       } d-flex center`}
+      onClick={action}
     >
       <Icon name={icon} />
     </button>

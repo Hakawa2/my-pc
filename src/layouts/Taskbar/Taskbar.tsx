@@ -34,7 +34,10 @@ export function TaskBar() {
       <section
         className={`${styles.utilitys} d-flex gap-sm inverted-shadow px-sm`}
       >
-        <IconButton icon="windows-0" action={() => console.log("aaa")} />
+        <IconButton
+          icon="loudspeaker_rays-0"
+          action={() => console.log("aaa")}
+        />
         <Clock />
       </section>
     </footer>

@@ -26,9 +26,11 @@
 .gap-sm {
   gap: var(--gap-small);
 }
+
 .gap-md {
   gap: var(--gap-medium);
 }
+
 .gap-large {
   gap: var(--gap-large);
 }
