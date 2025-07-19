@@ -6,17 +6,18 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "baseUrl": ".",
     "paths": {
-      "@components": ["./src/components/*"],
-      "@featires": ["./src/featires/*"],
-      "@hooks": ["./src/hooks/*"],
-      "@layouts": ["./src/layouts/*"],
-      "@pages": ["./src/pages/*"],
-      "@services": ["./src/services/*"],
-      "@stores": ["./src/stores/*"],
-      "@styles": ["./src/styles/*"],
-      "@types": ["./src/types/*"],
-      "@utils": ["./src/utils/*"]
+      "@/components/*": ["src/components/*"],
+      "@/features/*": ["src/features/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/layouts/*": ["src/layouts/*"],
+      "@/pages/*": ["src/pages/*"],
+      "@/services/*": ["src/services/*"],
+      "@/stores/*": ["src/stores/*"],
+      "@/styles/*": ["src/styles/*"],
+      "@/types/*": ["src/types/*"],
+      "@/utils/*": ["src/utils/*"]
     },
 
     /* Bundler mode */

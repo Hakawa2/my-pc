@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "MSW98UI";
+  font-weight: 400;
+  src: url("../assets/fonts/MSW98UI-Regular.ttf");
+}
+
+@font-face {
+  font-family: "MSW98UI";
+  font-weight: bold;
+  src: url("/fonts/MSW98UI-Bold.ttf");
+}

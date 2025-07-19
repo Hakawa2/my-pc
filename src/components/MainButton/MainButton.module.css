@@ -1,0 +1,16 @@
+.button {
+  border: none;
+  cursor: pointer;
+  background-color: var(--mono-100);
+  transition: all 0.1s ease-in-out;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.sm {
+  min-width: 8rem;
+}
+
+.md {
+  min-width: 16rem;
+}
