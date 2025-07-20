@@ -1,4 +1,4 @@
-import { Desktop } from "@/layouts/Desktop/Desktop";
+import { Desktop } from "@/features/Desktop/Desktop";
 import { TaskBar } from "@/layouts/Taskbar/Taskbar";
 import "./App.css";
 
