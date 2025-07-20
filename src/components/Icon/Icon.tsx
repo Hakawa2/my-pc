@@ -11,6 +11,7 @@ export function Icon({ name, size = "sm" }: IconProps) {
       className={`${styles[size]} d-flex center`}
       src={`/icons/${name}.png`}
       aria-hidden="true"
+      data-testid={name}
     />
   );
 }
