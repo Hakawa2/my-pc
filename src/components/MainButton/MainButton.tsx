@@ -1,4 +1,3 @@
-import { useHoverClass } from "@/hooks/useHoverClass";
 import type { ButtonBaseProps } from "@/types/button-base.type";
 import { Icon } from "../Icon/Icon";
 import styles from "./MainButton.module.css";
@@ -6,11 +5,16 @@ import styles from "./MainButton.module.css";
 type MainButtoProps = {
   label: string;
   icon?: string;
+  isActive?: boolean;
 } & ButtonBaseProps;
 
-export function MainButton({ icon, label, size = "sm" }: MainButtoProps) {
-  const ref = useHoverClass<HTMLButtonElement>("inverted-shadow");
-
+export function MainButton({
+  icon,
+  label,
+  isActive,
+  size = "sm",
+  action,
+}: MainButtoProps) {
   const orientationClassMap = {
     sm: "center",
     md: "start",
@@ -19,8 +23,10 @@ export function MainButton({ icon, label, size = "sm" }: MainButtoProps) {
 
   return (
     <button
-      ref={ref}
-      className={`${styles.button} ${styles[size]} d-flex ${orientationClassMap[size]} gap-sm shadow`}
+      className={`${styles.button} ${styles[size]} d-flex ${
+        orientationClassMap[size]
+      } gap-sm ${isActive ? "inverted-shadow" : "shadow"}`}
+      onClick={action}
     >
       {icon && <Icon name={icon} />}
 

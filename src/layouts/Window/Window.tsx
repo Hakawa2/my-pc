@@ -1,17 +1,27 @@
+import { useApplicationStore } from "@/stores/application";
 import { Header } from "../Header/Header";
 import styles from "./Window.module.css";
 
-export function Window() {
+type WindowProps = {
+  content: any;
+  icon: string;
+  title: string;
+  id: string;
+};
+
+export function Window({ content, icon, title, id }: WindowProps) {
+  const { closeApp, toggleMinimize } = useApplicationStore();
+
   const actionsMock = {
-    onMinimize: () => console.log("minimizou"),
+    onMinimize: () => toggleMinimize(id),
     onMaximize: () => console.log("maxizimou"),
-    onClose: () => console.log("fechou"),
+    onClose: () => closeApp(id),
   };
 
   return (
     <section className={`${styles.window} ${styles.opened}`}>
-      <Header actions={actionsMock} icon="doom" name="estou rodando doom" />
-      <div className={styles.content}>ESTOU RODANDO DOOM</div>
+      <Header actions={actionsMock} icon={icon} name={title} />
+      <div className={styles.content}>{content}</div>
     </section>
   );
 }
