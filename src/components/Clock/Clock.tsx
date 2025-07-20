@@ -17,5 +17,9 @@ export function Clock() {
     minute: "2-digit",
   });
 
-  return <span className={styles.clock}>{formattedTime}</span>;
+  return (
+    <span className={styles.clock} data-testid="clock">
+      {formattedTime}
+    </span>
+  );
 }
