@@ -17,6 +17,10 @@
   &.start {
     justify-content: flex-start;
   }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
 }
 
 .px-sm {
@@ -31,7 +35,7 @@
   gap: var(--gap-medium);
 }
 
-.gap-large {
+.gap-lg {
   gap: var(--gap-large);
 }
 

@@ -1,8 +1,12 @@
+import type { JSX } from "react";
+
 export type Application = {
   id: string;
   title: string;
   icon: string;
-  content: React.ReactNode;
+  tabBarIco?: string;
+  content: () => JSX.Element;
   isMinimized?: boolean;
+  isMaximized?: boolean;
   isFocused?: boolean;
 };

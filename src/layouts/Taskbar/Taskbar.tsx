@@ -30,7 +30,7 @@ export function TaskBar() {
           <MainButton
             key={item.id}
             label={item.title}
-            icon={item.icon}
+            icon={item.tabBarIco ?? item.icon}
             isActive={item.isFocused}
             size="md"
             action={() => getApp(item.id)}

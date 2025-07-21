@@ -1,22 +1,25 @@
 import type { Application } from "@/types/application.type";
+import { InternetExplorer } from "../InternetExplorer/InternetExplorer";
 
 export const applicationsConfig: Application[] = [
   {
     id: "doom",
     title: "Doom",
     icon: "doom",
-    content: "DOOMMMM",
+
+    content: InternetExplorer,
   },
   {
-    id: "blha !!!!",
-    title: "blha !!!!",
-    icon: "blha !!!!",
-    content: "impsu",
+    id: "ie",
+    title: "Internet Explorer",
+    icon: "msie1-0",
+    tabBarIco: "html-1",
+    content: InternetExplorer,
   },
   {
     id: "lorem",
     title: "lorem",
     icon: "lorem",
-    content: "lorem",
+    content: InternetExplorer,
   },
 ];

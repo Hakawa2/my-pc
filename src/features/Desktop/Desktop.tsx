@@ -2,6 +2,7 @@ import { Shortcut } from "@/components/Shortcut/Shortcut";
 import { Window } from "@/layouts/Window/Window";
 import { useApplicationStore } from "@/stores/application";
 import type { Application } from "@/types/application.type";
+import React from "react";
 import styles from "./Desktop.module.css";
 import { applicationsConfig } from "./applications.config";
 
@@ -30,8 +31,9 @@ export function Desktop() {
     return (
       currentApp?.id && (
         <Window
-          content={currentApp.content}
-          icon={currentApp.icon}
+          content={React.createElement(currentApp.content)}
+          isMaximized={currentApp.isMaximized}
+          icon={currentApp.tabBarIco ?? currentApp.icon}
           title={currentApp.title}
           id={currentApp.id}
         />
@@ -40,7 +42,7 @@ export function Desktop() {
   };
 
   return (
-    <div className={`${styles.desktop} d-flex start column gap-sm`}>
+    <div className={`${styles.desktop} d-flex start column gap-lg`}>
       {makeShortCuts()}
       {makeWindow()}
     </div>

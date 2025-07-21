@@ -5,6 +5,7 @@ type ApplicationStore = {
   openApps: Application[];
   openApp: (app: Application) => void;
   closeApp: (appId: string) => void;
+  toggleMaximize: (appId: string) => void;
   toggleMinimize: (appId: string) => void;
   focusApp: (appId: string) => void;
   getApp: (appId: string) => Application | undefined;
@@ -27,6 +28,13 @@ export const useApplicationStore = create<ApplicationStore>((set, get) => ({
   closeApp: (appId) =>
     set((state) => ({
       openApps: state.openApps.filter((a) => a.id !== appId),
+    })),
+
+  toggleMaximize: (appId) =>
+    set((state) => ({
+      openApps: state.openApps.map((a) =>
+        a.id === appId ? { ...a, isMaximized: !a.isMaximized } : a
+      ),
     })),
 
   toggleMinimize: (appId) =>

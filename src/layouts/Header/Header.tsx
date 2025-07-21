@@ -13,13 +13,13 @@ export function Header({ icon, name, actions }: HeaderProps) {
   return (
     <nav className={`${styles.header} d-flex space-between px-sm`}>
       <div className="d-flex gap-sm">
-        <Icon name={icon} />
+        <Icon name={icon} size="sm" />
         <p>{name}</p>
       </div>
-      <div className="d-flex gap-sm">
+      <div className="d-flex">
         <IconButton icon="minimize" action={actions.onMinimize} />
-        <IconButton icon="maximaze" action={actions.onMaximize} />
-        <IconButton icon="close" action={actions.onClose} />
+        <IconButton icon="maximize" action={actions.onMaximize} />
+        <IconButton icon="cross" action={actions.onClose} />
       </div>
     </nav>
   );
